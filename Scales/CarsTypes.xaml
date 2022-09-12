@@ -1,0 +1,55 @@
+﻿<Window x:Class="Scales.CarsTypes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Scales"
+        mc:Ignorable="d"
+        Title="CarsTypes" Height="450" Width="500" MinWidth="500" MinHeight="450" MaxWidth="500" MaxHeight="450">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="TypesGrid"  CanUserAddRows="False"  AutoGenerateColumns="False" Grid.Row="5" Grid.Column="0" Grid.RowSpan="9" Grid.ColumnSpan="15" MouseUp="SelectType">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Path=Id}" Width="0" Visibility="Hidden" />
+                <DataGridTextColumn Header="Марка автомобиля" Binding="{Binding Path=Type}" Width="*" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Марка а/м" Grid.Row="1" Grid.Column="2" Grid.RowSpan="1" Grid.ColumnSpan="3"/>
+        <TextBox x:Name="Type" Grid.Row="1" Grid.Column="5" Grid.RowSpan="1" Grid.ColumnSpan="5" FontSize="20"/>
+        <Button Content="Добавить" Grid.Row="3" Grid.Column="2" Grid.RowSpan="1" Grid.ColumnSpan="3" Click="AddType"/>
+        <Button Content="Удалить" Grid.Row="3" Grid.Column="8" Grid.RowSpan="1" Grid.ColumnSpan="3" Click="DeleteType"/>
+    </Grid>
+</Window>
